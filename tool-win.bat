@@ -2,7 +2,7 @@
 :start
 
 echo[
-echo -Copyright (C) dhtdht020 2018---------------------------------v1.1--
+echo -Copyright (C) dhtdht020 2018---------------------------------v1.2--
 echo[
 echo Please make sure this batch file is located in the folder that contains the
 echo undeleteable folder.
@@ -26,11 +26,13 @@ echo Alright, removing %folder%..
 echo[
 rd /s "\\?\%cd%\%folder%" || if errorlevel 1 goto error
 pause 
+exit
 
 :Y2
 
 echo Please move me to the folder that CONTAINS the undeleteable folder! You are currently in "%cd%".
 pause
+exit
 
 :error
 
@@ -47,3 +49,4 @@ pause
 
 :Y3
 pause
+exit
